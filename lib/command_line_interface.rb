@@ -2,6 +2,7 @@ require_relative "../lib/scraper.rb"
 require_relative "../lib/student.rb"
 require 'nokogiri'
 require 'colorize'
+require 'pry'
 
 class CommandLineInterface
   BASE_PATH = "./fixtures/student-site/"
@@ -14,6 +15,7 @@ class CommandLineInterface
 
   def make_students
     students_array = Scraper.scrape_index_page(BASE_PATH + 'index.html')
+    # binding.pry
     Student.create_from_collection(students_array)
   end
 
