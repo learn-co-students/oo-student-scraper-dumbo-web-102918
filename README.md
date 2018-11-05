@@ -38,6 +38,9 @@ This is a class method that should take in an argument of the URL of the index p
 
 Here's a look at the desired behavior:
 
+*name*
+*location*
+*profile_url*
 ```ruby
 Scraper.scrape_index_page(index_url)
 # => [
@@ -66,7 +69,14 @@ Scraper.scrape_profile_page(profile_url)
      }
 ```
 
-The only attributes you need to scrape from a student's profile page are the ones listed above: twitter url, linkedin url, github url, blog url, profile quote, and bio. The hash you build using those attributes should be formatted like the one in the example above.
+The only attributes you need to scrape from a student's profile page are the ones listed above:
+twitter url,
+linkedin url,
+github url,
+blog url,
+profile quote, and
+bio.
+The hash you build using those attributes should be formatted like the one in the example above.
 
 **Why class methods?**
 
